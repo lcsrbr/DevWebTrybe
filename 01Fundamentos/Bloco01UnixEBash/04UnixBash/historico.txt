@@ -1,0 +1,10 @@
+  300  history
+  301  history | tail -3
+  302  oi
+  303  history | tail -3
+  304  history | tail -10
+  305  history | tail -10 | sort
+  306  history | sort | tail -10
+  307  history | sort
+  308  history | tail-10 | cat historico.txt
+  309  history | tail-10 | cat > historico.txt

@@ -1,0 +1,7 @@
+cat cores	
+azul
+vermelho
+laranja
+marrom
+verde
+amarelo
