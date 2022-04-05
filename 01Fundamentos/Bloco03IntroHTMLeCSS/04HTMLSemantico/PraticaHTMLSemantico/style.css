@@ -18,7 +18,6 @@ html {
 }
 
 #fatosPrincipais {
-    border: 2px red solid;
 }
 
 #fatosPrincipais img {
@@ -27,7 +26,6 @@ html {
 }
 
 .textoPrincipal {
-    border: 2px red solid;
     float: left;
     text-align: left;
     margin: 10px;
@@ -43,7 +41,6 @@ table {
 }
 
 #forca {
-    border: 2px red solid;
     height: 500px;
 }
 
@@ -56,19 +53,23 @@ table {
 }
 
 #visao {
-    border: 2px red solid;
     height: 500px;
+}
 
+#visao p {
+    text-align: center;
 }
 
 #visao img {
     float: right;
+}
 
+h3 {
+    text-align: center;
 }
 
 aside {
     display: block;
-    border: 2px red solid;
     position: relative;
     top: 0;
     
