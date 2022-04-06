@@ -97,7 +97,7 @@ if (nota >= 80 && nota <= 100) {
 
 /* OPERADORES LÓGICOS */
 
-/* && */
+/* And (&&) */
 
 const currentHour = 10;
 var message = "";
@@ -117,3 +117,18 @@ message = "Não deveríamos comer nada, é hora de dormir";
 }
 
 console.log("São " + currentHour + " horas. " + message)
+
+
+/* Or (||)  */
+
+var weekDay = "sábado";
+
+if (weekDay == "segunda-feira" || weekDay ==  "terça-feira" || weekDay ==  "quarta-feira" || weekDay ==  "quinta-feira" || weekDay ==  "sexta-feira") {
+    console.log("Oba, mais um dia de aprednizado na Trybe >:D")
+} else if (weekDay == "sábado" || weekDay == "domingo") {
+    console.log("FINALMENTE, decanso merecido U.U")
+ } else {
+     false
+ }
+
+ 
