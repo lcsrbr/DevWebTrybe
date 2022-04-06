@@ -49,3 +49,48 @@ const perimeter = 2*(base+height);
 
 console.log("área = " + area)
 console.log("perímetro = " + perimeter)
+
+//if - se acontecer alguma coisa
+//elfe - senao acontece outra coisa
+
+/*
+
+if (condicao) {
+    //
+
+} else if (outraCondicao) {
+    //
+} else if (outraCondicao) {
+    //
+} else if (outraCondicao) {
+    //
+} else {
+    //
+}
+*/
+
+/*IF ELSE*/
+
+let trybe = 16.30;
+
+if (trybe >= 14 && trybe < 14.40) {
+    console.log("Esquenta");
+} else if (trybe >= 16.30 && trybe < 17.50) {
+    console.log("Aula ao vivo");
+} else if (trybe >= 19.40 && trybe < 20) {
+    console.log("Fechamento");
+} else {
+    console.log("Fora dos momentos síncronos")
+}
+
+const nota = 100;
+
+if (nota >= 80 && nota <= 100) {
+    console.log ("Parabéns! Você foi aprovado(a)!");
+} else if (nota >= 60 && nota < 80) {
+    console.log ("Você está na lista de espera");
+} else if (nota < 60) {
+    console.log ("Você foi reprovado");
+} else {
+    false
+}
