@@ -103,14 +103,14 @@ const currentHour = 10;
 var message = "";
 
 if (currentHour >= 22) {
-message = "Não deveríamos comer nada, é hora de dormir";
+    message = "Não deveríamos comer nada, é hora de dormir";
 } else if (currentHour >= 18 && currentHour < 22) {
     message = "Rango da noite, vamos jantar ;D";
-} else if (currentHour >=14 && currentHour < 18) {
-    message= "Vamos fazer um bolo pro café da tarde?";
+} else if (currentHour >= 14 && currentHour < 18) {
+    message = "Vamos fazer um bolo pro café da tarde?";
 } else if (currentHour >= 11 && currentHour < 14) {
     message = "Hora do almoço!!!";
-} else if (currentHour>= 4 && currentHour < 11) {
+} else if (currentHour >= 4 && currentHour < 11) {
     message = "Hmm, cheiro de café recém passado!"
 } else {
     false
@@ -123,12 +123,29 @@ console.log("São " + currentHour + " horas. " + message)
 
 var weekDay = "sábado";
 
-if (weekDay == "segunda-feira" || weekDay ==  "terça-feira" || weekDay ==  "quarta-feira" || weekDay ==  "quinta-feira" || weekDay ==  "sexta-feira") {
+if (weekDay == "segunda-feira" || weekDay == "terça-feira" || weekDay == "quarta-feira" || weekDay == "quinta-feira" || weekDay == "sexta-feira") {
     console.log("Oba, mais um dia de aprednizado na Trybe >:D")
 } else if (weekDay == "sábado" || weekDay == "domingo") {
     console.log("FINALMENTE, decanso merecido U.U")
- } else {
-     false
- }
+} else {
+    false
+}
 
- 
+/* switch -- case  */
+
+var status = "aprovada"; //aprovada, lista, reprovada
+
+    switch (status) {
+        case "aprovada":
+            console.log("parabéns você foi aprovada(o)!")
+            break;
+        case "lista":
+            console.log("Você está na lista")
+            break;
+        case "reprovada":
+            console.log("você foi reprovado")
+            break;
+
+        default:
+            console.log("não se aplica")
+    }
