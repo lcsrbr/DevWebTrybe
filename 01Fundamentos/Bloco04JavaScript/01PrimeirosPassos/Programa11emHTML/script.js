@@ -1,5 +1,4 @@
 /* 
-
 Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, use as seguintes referências:
 INSS (Instituto Nacional do Seguro Social)
@@ -24,5 +23,41 @@ Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
 O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 Resultado: R$ 2.612,55.
 Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
-
 */
+
+const salarioBruto = prompt("insira seu salário");
+let umPorCento = salarioBruto / 100
+let inss;
+
+if (salarioBruto <= 1556.94) {
+    inss = umPorCento * 8;
+} else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+    inss = umPorCento * 9;
+} else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    inss = umPorCento * 11;
+} else if (salarioBruto > 5189.82) {
+    inss = 570.88;
+} else {
+    false
+}
+
+let salarioBase = salarioBruto - inss;
+let ir;
+if (salarioBase <= 1903.98) {
+    ir = 0;
+} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    ir = ((salarioBase / 100) * 7.5) - 142.80;
+} else if (salarioBase >= 2826.66 && salarioBase <= 3571.05) {
+    ir = ((salarioBase / 100) * 15) - 354.80;
+} else if (salarioBase >= 2751.06 && salarioBase <= 4664.68) {
+    ir = ((salarioBase / 100) * 22.5) - 636.13;
+} else if (salarioBase > 4664.68) {
+    ir = ((salarioBase / 100) * 27.5) - 869.36;
+} else {
+    false
+}
+
+const salarioLiquido = (salarioBase - ir);
+document.write("VALORES EM R$: Salário Bruto: " + salarioBruto +", Salário Base (bruto - inss): "+ salarioBase +", INSS: "+ inss +", IR: "+ ir)
+document.write("<br>")
+document.write("Salário Líquido: R$ "+ salarioLiquido)
