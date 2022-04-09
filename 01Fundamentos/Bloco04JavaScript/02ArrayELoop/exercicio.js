@@ -1,3 +1,29 @@
+console.log("");
+console.log("Obtenha o valor *Serviços* do array menu :");
+
+
+let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+let menuServices = menu.indexOf('Serviços');
+
+console.log(menuServices);
+
+//
+console.log("");
+console.log("Procure o índice do valor *Portfólio* do array menu :");
+
+
+let indexOfPortfolio = menu.indexOf('Portfólio');;
+
+console.log(indexOfPortfolio);
+
+console.log("")
+console.log("Adicione o valor *Contato* no final do array menu :")
+
+menu.push('Contato');
+
+console.log(menu);
+
+
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //
 console.log("")
