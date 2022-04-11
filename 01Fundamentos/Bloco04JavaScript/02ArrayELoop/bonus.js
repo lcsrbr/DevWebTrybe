@@ -53,8 +53,8 @@ console.log('Agora crie um novo array a partir do array numbers , sem perdê-lo.
 let multiplicaPeloSeguinte = [];
 
 for (let index = 0; index < numbers.length; index += 1) {
-  if (index + 1 < numbers.length) {
-    multiplicaPeloSeguinte.push(numbers[index] * numbers[index + 1]);
+  if (index + 1 < numbers.length) { //enquanto o index for menor que o comprimento do array
+    multiplicaPeloSeguinte.push(numbers[index] * numbers[index + 1]); //
   } else {
     multiplicaPeloSeguinte.push(numbers[index] * 2);
   }

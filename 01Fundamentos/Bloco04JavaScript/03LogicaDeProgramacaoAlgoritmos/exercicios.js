@@ -2,6 +2,18 @@
 
 console.log('crie um algoritmo que retorne o fatorial de 10');
 
+let sequencia = [];
+for (i = 10; i >= 1; i -= 1) {
+    sequencia.push(i)
+}
+console.log(sequencia);
+
+let sum = sequencia.length;
+for (i = 1; i < sequencia.length; i += 1) {
+    sum *= sequencia[i] 
+
+}
+console.log(sum);
 
 console.log('');
 console.log('desenvolva um algoritmo que é capaz de inverter uma palavra.');
