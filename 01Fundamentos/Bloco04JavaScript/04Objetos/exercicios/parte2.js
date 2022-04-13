@@ -70,6 +70,35 @@ return palavra
 console.log(maiorPalavra(arrayTeste));
  */
 
+/* //// 5 /////
+let arrayTeste = [2, 3, 2, 5, 8, 2, 3]; 
+
+function maisRepete (array) {
+    
+    let repete = 0;
+    let iRepete = 0;
+    let armazenaRepete = 0;
+
+    for (let i in array) {
+        let verifica = array[i];
+        for (let i2 in array) {
+            if (verifica === array[i2]) {
+                repete += 1
+            }
+        }
+    if (repete > armazenaRepete) { //eu repeti 'armazena repete'vezes o index 'iRepete'. Verifico se outro i vai conseguir repetir mais vezes
+        armazenaRepete = repete
+        iRepete = i
+    }
+    repete = 0
+}
+return (array[iRepete]);
+}
+
+console.log(maisRepete(arrayTeste));
+ */
+
+/* ///// 6 /////
 let teste = 5
 
 function somatorio(n) {
@@ -81,3 +110,5 @@ return soma
 }
 
 console.log(somatorio(teste));
+
+ */
