@@ -2,7 +2,7 @@
 
 
 function comoMeVejo(array, text) {
-    return document.getElementsByTagName('p')[array].innerText = text.toUpperCase();
+    return document.getElementsByTagName('p')[array].innerText = text;
 }
 
 comoMeVejo(0, "me vejo com 30 anos!")
@@ -37,8 +37,14 @@ alteraTitulo("Exercício 5.1 - JavaScript")
 
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
-
- //ex 1
+function maiusculo(i) {
+    let fraseP = document.getElementsByTagName('p')[i];
+    fraseP.innerHTML = fraseP.innerHTML.toUpperCase();
+  }
+  
+  maiusculo(0);
+  maiusculo(1);
+  maiusculo(2);
 
 // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 
