@@ -11,7 +11,7 @@ const divisao = a / b;
 const modulo = a % b;
 
 console.log("A = " + a + ", B = " + b);
-console.log("Adição, Subtração, Multiplicação, Divisão, Módulo = " + adicao, subtracao, multiplicacao, divisao, modulo);
+console.log("Adição, Subtração, Multiplicação, Divisão, Módulo = " + adicao, subtracao +','+ multiplicacao, divisao, modulo);
 //////
 console.log("Programa dois");
 
@@ -37,9 +37,9 @@ console.log("Programa quatro");
 
 const d = -2;
 
-if (d >= 0) {
+if (d > 0) {
     console.log("Positive = " + d);
-} else if (d <= 0) {
+} else if (d < 0) {
     console.log("Negative = " + d);
 } else {
     console.log("Zero");
@@ -60,14 +60,14 @@ if (anguloA + anguloB + anguloC == 180) {
 }
 
 console.log("programa seis");
-const peca = "peao";
+const peca = "torre";
 
 switch (peca) {
     case "peao":
         console.log("Peão: anda pra frente, come na diagonal, primeiro movimento pode andar duas casas");
         break;
     case "torre":
-        console.log("Torre: anda na vertical");
+        console.log("Torre: anda na vertical e horizontal");
         break;
     case "cavalo":
         console.log("Cavalo: anda em L (uma casa, depois duas em lateral");
