@@ -40,8 +40,10 @@ alteraTitulo("Exercício 5.1 - JavaScript")
 function maiusculo(i) {
     let fraseP = document.getElementsByTagName('p')[i];
     fraseP.innerHTML = fraseP.innerHTML.toUpperCase();
+
+    
   }
-  
+
   maiusculo(0);
   maiusculo(1);
   maiusculo(2);
