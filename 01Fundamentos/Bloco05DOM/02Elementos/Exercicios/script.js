@@ -114,7 +114,6 @@ document.getElementById('right-content').style.marginRight = 'auto';
 
 document.getElementById('center-content').style.backgroundColor = 'green';
 
-
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 
 /* 
