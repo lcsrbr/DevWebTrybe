@@ -117,3 +117,18 @@ document.getElementById('center-content').style.backgroundColor = 'green';
 
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 
+/* 
+let li9 = document.getElementsByTagName('li')[9];
+li9.remove();
+
+let li8 = document.getElementsByTagName('li')[8];
+li8.remove();
+ */
+
+function remove (tag, array) {
+  let removeli = document.getElementsByTagName(tag)[array];
+removeli.remove();
+}
+
+remove('li', 9)
+remove('li', 8)
