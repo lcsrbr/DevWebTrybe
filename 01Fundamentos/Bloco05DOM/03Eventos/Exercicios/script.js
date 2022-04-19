@@ -73,17 +73,17 @@ function botaoCorFeriados() {
     }
   }
 }
-botaoCorFeriados ()
+botaoCorFeriados()
 
 //Ex4
-function buttonSextaFeira () {
-let buttonContainer = document.querySelector(".buttons-container");
-let createButtonFriday = document.createElement("button");
-buttonContainer.appendChild(createButtonFriday);
-createButtonFriday.innerText = "Sexta-feira";
-createButtonFriday.id = "btn-friday";
+function buttonSextaFeira() {
+  let buttonContainer = document.querySelector(".buttons-container");
+  let createButtonFriday = document.createElement("button");
+  buttonContainer.appendChild(createButtonFriday);
+  createButtonFriday.innerText = "Sexta-feira";
+  createButtonFriday.id = "btn-friday";
 }
-buttonSextaFeira ()
+buttonSextaFeira()
 
 //Ex5
 function botaoTextoSextaFeira() {
@@ -98,7 +98,7 @@ function botaoTextoSextaFeira() {
     for (let i = 0; i < diasSexta.length; i += 1) {
       let editar = diasSexta[i]
 
-       if (editar.style.textDecoration === mudaTexto) {
+      if (editar.style.textDecoration === mudaTexto) {
         editar.style.textDecoration = textoOriginal
       } else {
         editar.style.textDecoration = mudaTexto
@@ -106,4 +106,24 @@ function botaoTextoSextaFeira() {
     }
   }
 }
-botaoTextoSextaFeira ()
+botaoTextoSextaFeira()
+
+//Ex6
+function alteraTextoDias() {
+  let varDias = document.querySelectorAll(".day")
+
+  for (let i in varDias) {
+    varDias[i].addEventListener("mouseover", mudaFonte)
+    varDias[i].addEventListener("mouseleave", voltaFonte)
+  }
+
+  function mudaFonte(event) {
+    event.target.style.fontSize = "25px"
+    event.target.style.transition = "0.1s"
+  }
+
+  function voltaFonte(event) {
+    event.target.style.fontSize = "20px"
+  }
+}
+alteraTextoDias()
