@@ -21,14 +21,14 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 function getDays() {
 
   for (let i = 0; i < dezDaysList.length; i += 1) {
-    const UlDays = document.getElementById("days");
+    const ulDays = document.getElementById("days");
     const days = dezDaysList[i];
 
     const liDays = document.createElement('li');
 
     liDays.innerText = days;
 
-    UlDays.appendChild(liDays)
+    ulDays.appendChild(liDays)
     liDays.className = "day"
 
     if (liDays.innerText === "24" || liDays.innerText === "31") {
