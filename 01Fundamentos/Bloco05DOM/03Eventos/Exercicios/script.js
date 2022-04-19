@@ -36,7 +36,7 @@ function getDays() {
     } else if (liDays.innerText === "4" || liDays.innerText === "11" || liDays.innerText === "18") {
       liDays.className = "day friday";
     } else if (liDays.innerText === "25") {
-      liDays.className = "day holiday friday";
+      liDays.className = "day friday holiday";
     }
 
   }
@@ -63,7 +63,7 @@ function botaoCorFeriados() {
     let mudaCor = "lightgreen"
     let corOriginal = "rgb(238,238,238)"
 
-    for (let i = 0; i < 3; i += 1) {
+    for (let i = 0; i < diasFeriados.length; i += 1) {
       let editar = diasFeriados[i]
       if (editar.style.backgroundColor === mudaCor) {
         editar.style.backgroundColor = corOriginal;
@@ -80,7 +80,30 @@ function buttonSextaFeira () {
 let buttonContainer = document.querySelector(".buttons-container");
 let createButtonFriday = document.createElement("button");
 buttonContainer.appendChild(createButtonFriday);
-createButtonFriday.innerText = "Sexta-feira"
+createButtonFriday.innerText = "Sexta-feira";
 createButtonFriday.id = "btn-friday";
 }
 buttonSextaFeira ()
+
+//Ex5
+function botaoTextoSextaFeira() {
+  let bSextaFeira = document.querySelector("#btn-friday")
+  bSextaFeira.addEventListener("click", textoSextaFeira)
+
+  function textoSextaFeira() {
+    let diasSexta = document.getElementsByClassName("friday")
+    let mudaTexto = "underline"
+    let textoOriginal = "none"
+
+    for (let i = 0; i < diasSexta.length; i += 1) {
+      let editar = diasSexta[i]
+
+       if (editar.style.textDecoration === mudaTexto) {
+        editar.style.textDecoration = textoOriginal
+      } else {
+        editar.style.textDecoration = mudaTexto
+      }
+    }
+  }
+}
+botaoTextoSextaFeira ()
