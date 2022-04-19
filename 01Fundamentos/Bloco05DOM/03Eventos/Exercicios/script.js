@@ -158,9 +158,34 @@ function selecionaTask() {
   function clicaTask(event) {
     if (event.target.className === "task selected") {
       event.target.className = "task";
+      event.target.innerText = " ";
     } else {
       event.target.className = "task selected";
+      event.target.innerText = "s";
     }
   }
 }
 selecionaTask()
+
+//Ex10
+function selecionaDias() {
+  let varDias = document.querySelectorAll(".day")
+  let varTask = document.querySelector(".task")
+
+  for (let i = 0; i < varDias.length; i += 1) {
+    varDias[i].addEventListener("click", selecionaDia)
+  }
+
+  function selecionaDia(event) {
+    if (varTask.className === "task selected") {
+    //event.target.style.color = "green"
+    if (event.target.style.color === "green") {
+      event.target.style.color = "rgb(119,119,119)";
+    } else {
+      event.target.style.color = "green";
+    }
+    }
+  }
+
+}
+selecionaDias()
