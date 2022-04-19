@@ -112,7 +112,7 @@ botaoTextoSextaFeira()
 function alteraTextoDias() {
   let varDias = document.querySelectorAll(".day")
 
-  for (let i = 0; i < varDias.length; i+= 1) {
+  for (let i = 0; i < varDias.length; i += 1) {
     varDias[i].addEventListener("mouseover", mudaFonte)
     varDias[i].addEventListener("mouseleave", voltaFonte)
   }
@@ -127,24 +127,40 @@ function alteraTextoDias() {
   }
 }
 alteraTextoDias()
- 
+
 //Ex7
-function criaTasks (task) {
-let varTasks = document.querySelector(".my-tasks")
-let criaSpan = document.createElement("span")
-varTasks.appendChild(criaSpan)
-criaSpan.innerText = task
+function criaTasks(task) {
+  let varTasks = document.querySelector(".my-tasks")
+  let criaSpan = document.createElement("span")
+  varTasks.appendChild(criaSpan)
+  criaSpan.innerText = task
+  //varTasks.appendChild(document.createElement("br"))
+
 }
-criaTasks("projeto");
+criaTasks("projeto:");
 
 //Ex8
-
-function corTasks (cor) {
+function corTasks(cor) {
   let varTasks = document.querySelector(".my-tasks")
   let criaDiv = document.createElement("div")
   varTasks.appendChild(criaDiv)
   criaDiv.style.backgroundColor = cor
   criaDiv.className = "task"
   criaDiv.style.transition = "0.1s"
+}
+corTasks("green");
+
+
+//Ex9
+function selecionaTask() {
+  let varTask = document.querySelector(".task")
+  varTask.addEventListener("click", clicaTask)
+  function clicaTask(event) {
+    if (event.target.className === "task selected") {
+      event.target.className = "task";
+    } else {
+      event.target.className = "task selected";
+    }
   }
-  corTasks("green");
+}
+selecionaTask()
