@@ -109,10 +109,11 @@ function botaoTextoSextaFeira() {
 botaoTextoSextaFeira()
 
 //Ex6
+
 function alteraTextoDias() {
   let varDias = document.querySelectorAll(".day")
 
-  for (let i in varDias) {
+  for (let i = 0; i < varDias.length; i+= 1) {
     varDias[i].addEventListener("mouseover", mudaFonte)
     varDias[i].addEventListener("mouseleave", voltaFonte)
   }
@@ -127,3 +128,10 @@ function alteraTextoDias() {
   }
 }
 alteraTextoDias()
+ 
+//Ex7
+
+let varTasks = document.querySelector(".my-tasks")
+let criaSpan = document.createElement("span")
+varTasks.appendChild(criaSpan)
+criaSpan.innerText = "cozinhar"
