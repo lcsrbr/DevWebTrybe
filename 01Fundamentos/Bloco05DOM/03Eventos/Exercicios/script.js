@@ -16,7 +16,6 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 
 //Ex1
-
 function getDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
@@ -130,8 +129,22 @@ function alteraTextoDias() {
 alteraTextoDias()
  
 //Ex7
-
+function criaTasks (task) {
 let varTasks = document.querySelector(".my-tasks")
 let criaSpan = document.createElement("span")
 varTasks.appendChild(criaSpan)
-criaSpan.innerText = "cozinhar"
+criaSpan.innerText = task
+}
+criaTasks("projeto");
+
+//Ex8
+
+function corTasks (cor) {
+  let varTasks = document.querySelector(".my-tasks")
+  let criaDiv = document.createElement("div")
+  varTasks.appendChild(criaDiv)
+  criaDiv.style.backgroundColor = cor
+  criaDiv.className = "task"
+  criaDiv.style.transition = "0.1s"
+  }
+  corTasks("green");
