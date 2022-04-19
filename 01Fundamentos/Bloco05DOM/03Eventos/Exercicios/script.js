@@ -44,10 +44,11 @@ function createDaysOfTheWeek() {
 getDays ()
 
 //Ex2
-function buttonFeriado () {
+function buttonFeriados () {
 const varButtons = document.querySelector(".buttons-container");
 const createButton = document.createElement("button");
 varButtons.appendChild(createButton);
 createButton.id="btn-holiday";
 createButton.innerText = "Feriados";
 }
+buttonFeriados();
