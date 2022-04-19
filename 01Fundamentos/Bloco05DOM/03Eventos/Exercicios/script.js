@@ -29,7 +29,18 @@ function createDaysOfTheWeek() {
     liDays.innerText = days;
 
     UlDays.appendChild(liDays)
+    liDays.className = "day"
+
+    if (liDays.innerText === "24" || liDays.innerText === "31") {
+        liDays.className = "day holiday";
+    } else if (liDays.innerText === "4" || liDays.innerText === "11" || liDays.innerText === "18") {
+        liDays.className = "day friday";
+    } else if (liDays.innerText === "25" ) {
+        liDays.className = "day holiday friday";
+    }
+
   }
 }
-
 getDays ()
+
+
