@@ -1,0 +1,67 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(215, 249, 247);
+    height: 100px;
+}
+
+header p {
+    margin-bottom: 10px;
+    font-size: 150%;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 40px;
+}
+
+h1 {
+    font-size: large;
+}
+
+.aside-one {
+    background-color: bisque;
+}
+
+.aside-two {
+    background-color: darkkhaki;
+}
+
+.main-content {
+    margin: auto 2%;
+}
+
+footer {
+    background-color: grey;
+    bottom: 0;
+    position: static;
+    text-align: center;
+    font-size: 75%;
+}
