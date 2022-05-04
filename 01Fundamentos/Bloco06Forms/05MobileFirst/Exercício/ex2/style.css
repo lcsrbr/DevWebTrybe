@@ -104,3 +104,32 @@ footer {
         font-size: 100%;
     }
 }
+
+
+@media screen and (min-width:1024px) {
+    .container {
+        display: flex;
+        align-items: stretch;
+    }
+
+    #asides {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .aside-one {
+        display: inline-block;
+        text-align: center;
+        width: 400px;
+    }
+
+    .aside-two {
+        display: inline-block;
+        text-align: center;
+        width: 400px;
+    }
+
+    .main-content {
+        font-size: medium;
+    }
+}
