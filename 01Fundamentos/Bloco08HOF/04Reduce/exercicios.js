@@ -133,18 +133,17 @@ function ex6() {
         [10, 9, 9, 10, 8],
         [10, 7, 10, 8, 9]
     ];
-/* 
-    console.log(grades.map((notas, indice, array) => array[indice].reduce((acc, cur) => ((acc + cur)), 0) / notas.length))
-    const obj = {
-        name: students.reduce((acc, cur) => cur),
-        average: grades.reduce((acc, cur) => (acc + cur, 0) / grades.length)
-    } */
+    /* 
+        console.log(grades.map((notas, indice, array) => array[indice].reduce((acc, cur) => ((acc + cur)), 0) / notas.length))
+        const obj = {
+            name: students.reduce((acc, cur) => cur),
+            average: grades.reduce((acc, cur) => (acc + cur, 0) / grades.length)
+        } */
     function studentAverage() {
         return students.map((name, index) => ({
             nome: name,
             average: (grades[index].reduce((acc, curr) => acc + curr, 0) / cur.length),
         }))
-        
     }
 
     console.log(studentAverage());
