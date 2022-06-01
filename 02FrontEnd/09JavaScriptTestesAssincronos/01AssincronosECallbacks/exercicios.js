@@ -187,7 +187,7 @@ function ex7 () {
         },
       ];
       
-      console.log(pokemons.find('Squirtle'));
+      //console.log(pokemons.find('Squirtle'));
 
       function getPokemonDetails(filter, callback) {
         setTimeout(() => {
@@ -204,7 +204,7 @@ function ex7 () {
         }, 2000);
       }
       
-      //getPokemonDetails('Squirtle', () => {});
+      getPokemonDetails(('Squirtle') => {});
       
       module.exports = {
         getPokemonDetails,
