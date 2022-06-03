@@ -168,7 +168,6 @@ function ex6() {
     sendMarsTemperature(greet, handleError);
 }
 
-function ex7 () {
     const pokemons = [
         {
           name: 'Bulbasaur',
@@ -187,8 +186,6 @@ function ex7 () {
         },
       ];
       
-      //console.log(pokemons.find('Squirtle'));
-
       function getPokemonDetails(filter, callback) {
         setTimeout(() => {
           if (pokemons.find(filter) === undefined) {
@@ -203,11 +200,13 @@ function ex7 () {
           callback(null, messageFromProfOak);
         }, 2000);
       }
+
+     // getPokemonDetails(((pokemon) => pokemon.name === 'Squirtle'), ((error, sucess)  => error ? error : sucess));
       
-      getPokemonDetails(('Squirtle') => {});
-      
+     let param1 = (pokemon) => pokemon.name === 'Squirtle'
+     const param2 = (error, sucess) => error ? console.log(error) : console.log(sucess);
+     getPokemonDetails(param1, param2)
+
       module.exports = {
         getPokemonDetails,
       };
-}
-ex7()

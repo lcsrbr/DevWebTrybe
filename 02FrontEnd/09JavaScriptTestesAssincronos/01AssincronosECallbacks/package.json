@@ -1,8 +1,8 @@
 {
-  "name": "09assincronocallbacks",
+  "name": "01assincronosecallbacks",
   "version": "1.0.0",
   "description": "",
-  "main": "teste.js",
+  "main": "ex7.test.js",
   "scripts": {
     "test": "jest"
   },
