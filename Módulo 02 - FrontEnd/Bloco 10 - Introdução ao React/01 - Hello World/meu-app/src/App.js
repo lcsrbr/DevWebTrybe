@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react';
 
 
+const hello = <h1>Hello JSX!</h1>
+
 const testeVar = <p>isto <strong>deve</strong> ser impresso</p>
 
 const testeFunc = () => <p>isto <em>também</em> deve ser impresso</p>
@@ -22,6 +24,7 @@ function App() {
       <header className="App-header">
         <Heading></Heading>
         <p>Hello World!</p>
+        {hello}
         {testeVar}
         {testeFunc()}
         <Descricao/>
