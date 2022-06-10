@@ -23,13 +23,20 @@
    },
 ];
 
-console.log(conteudos)
-
 class Content extends React.Component {
    render() {
- 
    return (
-<div></div>
+<div>
+{conteudos.map(({ conteudo, bloco, status }) => {
+   return (
+      <div key={conteudo} className="card" >
+   <p> O conteúdo é {conteudo}</p>
+   <p> Bloco: {bloco}</p>
+   <p> Status: {status}</p>
+   </div>
+   )
+})}
+</div>
 )
 }
 }

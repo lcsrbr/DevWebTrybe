@@ -2,10 +2,11 @@ import './App.css';
 import React from 'react';
 import Header from './Header';
 import Content from './Content';
+import Footer from './Footer';
 
 const Task = (value) => {
   return (
-    <li>{value}</li>
+    <li key = {value}>{value}</li>
   );
 }
 
@@ -20,8 +21,9 @@ class App extends React.Component {
           <p>Com função</p>
           <ol> {arr.map((number) => Task(number))} </ol>
           <p>Sem função</p>
-          <ol> {arr.map((number) => <li>{number}</li>)} </ol>
-          <ol>{Content.map((item) => Task(item))}</ol>
+          <ol> {arr.map((number) => <li key={number.toString()}>{number}</li>)} </ol>
+          <Content/>
+        <Footer />
         </div>
       </main>
     );
