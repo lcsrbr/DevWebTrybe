@@ -1,0 +1,11 @@
+cat cores	
+azul
+vermelho
+laranja
+marrom
+verde
+amarelo
+morango
+laranja
+banana
+macã
