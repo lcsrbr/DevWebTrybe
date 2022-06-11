@@ -1,7 +1,0 @@
-amarelo
-azul
-cat cores	
-laranja
-marrom
-verde
-vermelho
