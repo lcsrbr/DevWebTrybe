@@ -16,13 +16,16 @@ class App extends React.Component {
   }
 
   handleClick() {
-    this.setState(({ numeroDeCliques }) => ({ numeroDeCliques: numeroDeCliques + 1 }), console.log(`botão1 ${this.alteraCor(this.state.numeroDeCliques)}`));
+    this.setState(({ numeroDeCliques }) => ({ numeroDeCliques: numeroDeCliques + 1 }), 
+    console.log(`botão1 ${this.alteraCor(this.state.numeroDeCliques)}`));
   }
   handleClick2() {
-    this.setState((estadoAnterior) => ({ numeroDeCliques2: estadoAnterior.numeroDeCliques2 + 1 }), console.log(`botão2 ${this.alteraCor(this.state.numeroDeCliques2)}`))
+    this.setState((estadoAnterior) => ({ numeroDeCliques2: estadoAnterior.numeroDeCliques2 + 1 }),
+     console.log(`botão2 ${this.alteraCor(this.state.numeroDeCliques2)}`))
   }
   handleClick3() {
-    this.setState((estadoAnterior) => ({ numeroDeCliques3: estadoAnterior.numeroDeCliques3 + 1 }), console.log(`botão3 ${this.alteraCor(this.state.numeroDeCliques3)}`))
+    this.setState((estadoAnterior) => ({ numeroDeCliques3: estadoAnterior.numeroDeCliques3 + 1 }), 
+    console.log(`botão3 ${this.alteraCor(this.state.numeroDeCliques3)}`))
   }
 
   alteraCor(cor) {
