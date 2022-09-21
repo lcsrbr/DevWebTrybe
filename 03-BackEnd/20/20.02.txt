@@ -1,0 +1,6 @@
+SELECT name AS 'nome', hours AS 'horas' from Scientists.Projects
+SELECT * FROM Projects ORDER BY name DESC;# 
+SELECT CONCAT('O projeto ', name, ' precisou de ', hours, ' horas para ser concluido') FROM Scientists.Projects;
+SELECT * FROM Projects ORDER BY hours DESC LIMIT 3;
+SELECT DISTINCT project FROM AssignedTo;
+SELECT CONCAT('existem ', COUNT(name), ' cientistas na tabela') AS 'result' FROM Scientistsg
