@@ -141,7 +141,6 @@ O programa conta com mais de 1.500 horas de aula, com período de um ano, aborda
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Introdução - Docker
-
 - ✔ 01: Introdução - Back-end
 - ✔ 01: Utilizando Containers - Docker
 - ✔ 02: Manipulando Imagens no Docker
@@ -157,9 +156,8 @@ O programa conta com mais de 1.500 horas de aula, com período de um ano, aborda
 - ✔ **05: Projeto - All For One  - NOTA: 100%**
 
 ##### Bloco 21: Funções SQL, JOINs e Normalização
-
--  ✔  01: Funções mais usadas no SQL
-- [ ] 02: Descomplicando JOINs
+- ✔ 01: Funções mais usadas no SQL
+- ✔ 02: Descomplicando JOINs
 - [ ] 03: Transformando ideias em um modelo de banco de dados
 - [ ] 04: Aula ao vivo + Projeto - One For All
 
