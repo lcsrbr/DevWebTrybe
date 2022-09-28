@@ -6,10 +6,7 @@ const peso = readline.question('informe seu peso: ')
 const IMC = (altura, peso) => {
     return (peso / (altura * altura)).toFixed(2)
 }
-
 const result = IMC(altura,peso)
-
-
 
 const situacaoIMC = () => {
     if (result < 18.5) return 'Abaixo do peso (magreza)';
