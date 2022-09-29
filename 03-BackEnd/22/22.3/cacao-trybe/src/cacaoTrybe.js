@@ -21,6 +21,23 @@ const writeCacaoTrybeFile = async (contentFile) => {
 		return null;
 	}
 };
+
+const updateCacaoTrybeFile = async (param) => {
+    const { id, name, brandId } = param
+    const cacaoTrybe = await readCacaoTrybeFile();
+    const chocolates = cacaoTrybe.chocolates;
+    const del = chocolates.filter((choq) => Number(choq.id) !== Number(id))
+    const newItem =  {
+        'id': Number(id),
+        'name': name,
+        'brandId': brandId
+    }
+    const result = [...del, newItem];
+    result.sort((a, b) => a.id - b.id)
+    writeCacaoTrybeFile({brands: [...cacaoTrybe.brands], chocolates: [...result]})
+    return newItem;
+  };
+
 const getAllChocolates = async () => {
     const cacaoTrybe = await readCacaoTrybeFile();
     return cacaoTrybe.chocolates;
@@ -55,9 +72,17 @@ const getChocolateById = async (id) => {
       .filter((chocolate) => chocolate.brandId === brandId);
   };
 
+  const searchChocolateByName = async (param) => {
+    const cacaoTrybe = await readCacaoTrybeFile();
+    return cacaoTrybe.chocolates.filter((choq) => choq.name.toLowerCase().includes(param.toLowerCase()));
+  };
+  
+
 module.exports = {
     getAllChocolates,
     createChocolate,
     getChocolateById,
     getChocolatesByBrand,
+    searchChocolateByName,
+    updateCacaoTrybeFile
 };
