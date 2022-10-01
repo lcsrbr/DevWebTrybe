@@ -16,5 +16,18 @@ route.post('/activities', validate, async (req, res) => {
     res.status(201).json({ message });
 })
 
+route.get('/signup', async (_req, res) => {
+    const result = await utils.getUsers()
+    return res.status(200).json({ result });
+})
+
+route.post('/signup', async (req, res) => {
+    const { email, password, firstName, phone } = req.body;
+    const message = await utils.createUsers(email, password, firstName, phone);
+
+    res.status(201).json({ message });
+})
+
+
 module.exports = route;
 
