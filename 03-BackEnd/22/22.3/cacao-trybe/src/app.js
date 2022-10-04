@@ -7,7 +7,6 @@ app.use(express.json());
 
 const cacaoTrybe = require('./cacaoTrybe');
 
-
 app.get('/chocolates', async (req, res) => {
     const chocolates = await cacaoTrybe.getAllChocolates();
     res.status(200).json({ chocolates });
@@ -60,8 +59,5 @@ app.get('/chocolates/brand/:brandId', async (req, res) => {
     const chocolates = await cacaoTrybe.getChocolatesByBrand(Number(brandId));
     res.status(200).json({ chocolates });
 });
-
-
-
 
 module.exports = app;
