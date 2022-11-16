@@ -79,7 +79,8 @@ class Superclass {
     public privateCh(param: string) {
         this.teste = param
     }
-  }
+    
+}
 
 
   class Bird2 extends Animal2 {
@@ -127,3 +128,6 @@ class Superclass2 {
   
   myFunc2(sup2);
   myFunc2(sub2);
+
+
+  
